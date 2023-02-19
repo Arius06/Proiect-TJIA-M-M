@@ -1,0 +1,484 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Poppins:wght@300;500;600;700&display=swap');
+
+::-webkit-scrollbar {
+    width: 0.6em;
+}
+
+::-webkit-scrollbar-track {
+    background: #C4D6CE;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0c442c;
+    border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0c442c9d;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(90.05deg, #FFF1F1 -1.74%, #C4D6CE 86.41%);
+}
+
+/* Burger menu */
+
+.burger-menu {
+    position: absolute;
+    z-index: 5;
+    width: 50px;
+    height: 50px;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.burger-menu span {
+    background: #0c442c;
+    width: 28px;
+    height: 4px;
+    border-radius: 6px;
+    position: absolute;
+    right: 13px;
+}
+
+.burger-menu span:nth-child(1) {
+    top: 12px;
+}.burger-menu span:nth-child(2) {
+     top: 22px;
+ }.burger-menu span:nth-child(3) {
+      top: 32px;
+  }
+
+.burger-menu.active span:nth-child(1) {
+    animation: top-burger-active .6s ease-in-out forwards;
+}
+.burger-menu.active span:nth-child(3) {
+    animation: bottom-burger-active .6s ease-in-out forwards;
+}
+.burger-menu.inactive span:nth-child(1) {
+    animation: top-burger-inactive .6s ease-in-out forwards;
+}
+.burger-menu.inactive span:nth-child(3) {
+    animation: bottom-burger-inactive .6s ease-in-out forwards;
+}
+
+@keyframes top-burger-active {
+    0% {
+        right: 13px;
+    }
+    30% {
+        width: 20px;
+        right: 17px;
+    }
+    90% {
+        top: 12px;
+    }
+    100% {
+        top: 16px;
+        width: 20px;
+        right: 17px;
+    }
+}
+@keyframes top-burger-inactive {
+    0% {
+        top: 16px;
+        width: 20px;
+        right: 17px;
+    }
+    30% {
+        top: 12px;
+    }
+    90% {
+        width: 20px;
+        right: 17px;
+    }
+    100% {
+        right: 13px;
+    }
+}
+@keyframes bottom-burger-active {
+    0% {
+        right: 13px;
+    }
+    30% {
+        right: 17px;
+        width: 20px;
+    }
+    90% {
+        top: 32px;
+    }
+    100% {
+        top: 28px;
+        width: 20px;
+        right: 17px;
+    }
+}
+@keyframes bottom-burger-inactive {
+    0% {
+        top: 28px;
+        width: 20px;
+        right: 17px;
+    }
+    30% {
+        top: 32px;
+    }
+    90% {
+        right: 17px;
+        width: 20px;
+    }
+    100% {
+        right: 13px;
+    }
+}
+
+/* End of burger code */
+
+.wrapper-aboutus {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+.header {
+    width: 100%;
+    height: 12vh;
+}
+
+.text-header {
+    position: relative;
+    width: 40vw;
+    left: 4%;
+    top: -6vh;
+}
+
+.line-break {
+    height: 3px;
+    width: 66%;
+    position: absolute;
+    right: 0px;
+    top: 10%;
+    background: rgb(12, 68, 44);
+}
+
+.small-hr {
+    height: 3px;
+    width: 0;
+    background: rgb(12, 68, 44);
+    transition: all .8s ease-in-out;
+}
+
+.extended {
+    width: 33%;
+}
+
+.second-header:nth-child(2) {
+    margin: 0 5vh 0 5vh;
+}
+
+.stats-div {
+    height: 40vh;
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 4vh 0px 0px;
+}
+
+.stat-bubble {
+    display: flex;
+    height: 28vh;
+    width: 16%;
+    background-color: rgba(12, 68, 44, 0.1);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 50%;
+}
+
+.counter, 
+.cnt-category {
+    font-family: Poppins, sans-serif;
+    font-size: 9vw;
+    color: rgba(12, 68, 44, 0.7);
+    margin: 5vh 0px 0px;
+    user-select: none;
+    pointer-events: none;
+}
+
+.cnt-category {
+    font-size: 1.6vw;
+    font-weight: 600;
+    margin: 0px;
+}
+
+.page-split {
+    width: 100%;
+    height: 5vh;
+    margin-top: 4vh;
+    background: rgba(12, 68, 44, 0.2);
+}
+
+/* Company story section */
+
+.text-div {
+    width: 80%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0px;
+}
+
+.textbox, .see-more {
+    color: rgb(12, 68, 44);
+    font-family: Poppins, sans-serif;
+    font-size: 1.2vw;
+    width: 60%;
+    cursor: default;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.see-more {
+    font-size: 1.4rem;
+    opacity: 0.6;
+    width: 100%;
+    cursor: pointer;
+    margin-top: -5vh;
+}
+
+.big-number, .scnd-big-number {
+    color: rgb(12, 68, 44);
+    font-family: Poppins, sans-serif;
+    font-size: 12vw;
+    opacity: 0.6;
+    cursor: default;
+    margin: 0px 0px 0px 12%;
+    padding: 0px;
+}
+
+.scnd-big-number {
+    margin: 0px 8% 0px 0px;
+}
+
+.thr-big-number {
+    margin: 0px 0px 0px 8%;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.blurred {
+    filter: blur(4px);
+    pointer-events: none;
+    user-select: none;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+.very-blurred {
+    filter: blur(30px);
+    opacity: .3;
+    pointer-events: none;
+    user-select: none;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+.image-banner {
+    width: 100%;
+    height: 50vh;
+    background-image: url(assets/sign-photo.png);
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 4% 0px 0px;
+}
+
+.contacte-wrapper, .sub-header, .icon-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.sub-header {
+    height: 20vh;
+    margin: 0px;
+}
+
+.text-header, .second-header, .phone-number, .company-email {
+    font-family: "Lora", sans-serif;
+    color: rgb(12, 68, 44);
+    font-size: 4.6vw;
+    cursor: default;
+    font-weight: 600;
+    user-select: none;
+}
+
+/* Contacts sections */
+
+.icon-section {
+    align-items: center;
+    justify-content: space-evenly;
+    height: 36vh;
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.phone-number, .company-email {
+    position: absolute;
+    right: 40%;
+    transition: all 0.2s ease-in-out 0s;
+    font-size: 5vw;
+}
+
+.company-email {
+    left: 40%;
+}
+
+.contacts-icon {
+    height: 20vh;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out 0s;
+}
+
+.social-media {
+    transition: all 0.2s ease-in-out 0s;
+}
+
+.fb {
+    transform: translate(24%, -30%) scale(0.6);
+}
+.ig {
+    transform: translate(-24%, 30%) scale(0.6);
+}
+
+.mail:hover,
+.phone:hover {
+    transform: translate(-4%, -6%) scale(1.2) rotate(-6deg);
+    opacity: 0.5;
+}
+
+.social-media:hover .fb{
+    transform: translate(18%, -44%) scale(0.7) rotate(-6deg);
+}
+.social-media:hover .ig{
+    transform: translate(-18%, 44%) scale(0.7) rotate(6deg);
+}
+
+.fb:hover,
+.ig:hover {
+    opacity: 0.5;
+}
+
+/* Footer section */
+
+.footer {
+    flex-direction: column;
+}
+
+.footer-wrapper, .footer {
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(18, 18, 18);
+}
+
+.footer-smalldesc {
+    padding-left: 5vw;
+    width: 50%;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.footer-logo {
+    height: 6vh;
+}
+
+.footer-textbox {
+    width: 40%;
+}
+
+.footer-desc {
+    color: rgba(255, 241, 241, 0.49);
+    font-size: 0.7vw;
+    font-family: 'Poppins', sans-serif;
+    pointer-events: none;
+    user-select: none;
+    margin: 0;
+}
+
+.footer-navlist {
+    width: 50%;
+    padding-right: 5vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.anchors {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 1vw;
+    margin: 0px;
+}
+
+.footer-anchor:hover {
+    color: rgb(255, 241, 241);
+}
+
+.footer-anchor {
+    color: rgba(255, 241, 241, 0.49);
+    font-family: Poppins, sans-serif;
+    cursor: pointer;
+    font-size: 0.8vw;
+    transition: all 0.2s ease-in-out 0s;
+    margin: 0px;
+}
+
+.footer-othlinks {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    margin: 0px;
+}
+
+.termsconds {
+    font-size: 0.6vw;
+}
+
+.footer-break {
+    width: 90%;
+    height: 1px;
+    background: rgb(255, 241, 241);
+    margin: 1vh 0px;
+}
+
+#copyright {
+    margin-bottom: 1vh;
+}
+
+/* End of footer */

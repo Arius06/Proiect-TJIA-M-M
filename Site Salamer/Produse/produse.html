@@ -9,17 +9,36 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Poppins:wght@300;500;600;700&display=swap"
           rel="stylesheet">
-    <title>Produse - In the works.</title>
+    <title>Salamer - Produse</title>
+    <link rel="icon" type="image/x-icon" href="../Resurse/favicon.png">
     <link rel="stylesheet" href="produse.css">
 </head>
 <body>
+<!-- Navigation menu -->
+    <div class="navigation-menu closed-nav">
+        <div id="menu">
+            <div id="menu-items">
+                <a href="../Landing/opening.html" class="menu-item" data-index="0">Acasa</a>
+                <a href="../Produse/produse.html" class="menu-item" data-index="1">Produse</a>
+                <a href="#" class="menu-item" data-index="2">Locatii</a>
+                <a href="../About-us/about.html" class="menu-item" data-index="3">Despre noi</a>
+            </div>
+            <div id="menu-pattern"></div>
+            <img src="../Resurse/icons/home-animation.gif" alt="home gif" class="gif menu-inactive">
+            <img src="../Resurse/icons/products-animation.gif" alt="products gif" class="gif menu-inactive">
+            <img src="../Resurse/icons/locations-animation.gif" alt="locations gif" class="gif menu-inactive">
+            <img src="../Resurse/icons/aboutus-animation.gif" alt="aboutus gif" class="gif menu-inactive">
+        </div>
+    </div>
 
+<!-- Burger menu -->
 <div class="burger-menu inactive">
     <span></span>
     <span></span>
     <span></span>
 </div>
 
+<!-- Main Content -->
 <div class="pagina-produse">
 
     <div class="gif-drag">
@@ -37,6 +56,8 @@
         </div>
     </div>
 
+    <!-- Track-ul de produse are efect de Parralax, insa nu se vede bine din cauza dimensiunii mici a imaginilor. -->
+
     <div class="slideshow-products" data-mouse-down-at="0" data-prev-percentage="0">
         <img src="assets-produse/afumat-fierte.png" alt="Salamer" class="image" draggable="false">
         <img src="assets-produse/crud-uscate.png" alt="Salamer" class="image" draggable="false">
@@ -46,7 +67,27 @@
         <img src="assets-produse/sunca.png" alt="Salamer" class="image" draggable="false">
         <img src="assets-produse/tobe.png" alt="Salamer" class="image" draggable="false">
     </div>
-
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-wrapper">
+            <div class="footer-smalldesc">
+                <img src="../Resurse/logo-white.png" alt="salamer white logo" class="footer-logo">
+            </div>
+            <div class="footer-navlist">
+                <div class="anchors">
+                    <a href="../Landing/opening.html"><p class="footer-anchor">ACASA</p></a>
+                    <a href="../About-us/about.html"><p class="footer-anchor">DESPRE NOI</p></a>
+                    <a href=""><p class="footer-anchor">LOCATII</p></a>
+                    <a href=""><p class="footer-anchor">Termeni și condiții</p></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-break"></div>
+        <p class="footer-desc" id="copyright">Acest website a fost realizat în cadrul
+            competiției ”Tekwill Junior Ambassadors” organizată de proiectul ”Tekwill în Fiecare
+            Școală” și nu reflectă neapărat opinia proiectului.
+            </p>
+    </div>
 </div>
 
 <script src="produse.js"></script>

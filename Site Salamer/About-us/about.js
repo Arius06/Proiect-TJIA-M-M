@@ -1,8 +1,11 @@
 const burgerMenu = document.querySelector(".burger-menu")
+const navMenu = document.querySelector(".navigation-menu")
+const navBar = document.querySelector(".navbar")
 
 burgerMenu.addEventListener('click', () => {
     burgerMenu.classList.toggle("active")
     burgerMenu.classList.toggle("inactive")
+    navMenu.classList.toggle("closed-nav")
 })
 
 let statCounters = document.querySelectorAll(".counter")
@@ -25,7 +28,7 @@ const lineBreaks = document.querySelectorAll(".small-hr")
 window.addEventListener('scroll', () => {
     let scrollProg = Math.floor(((window.scrollY) / (document.body.scrollHeight - window.innerHeight) * 100))
     console.log(scrollProg);
-
+    scrollProg > 3 ? navBar.classList.add("scrolled") : navBar.classList.remove("scrolled")
     if (scrollProg < 30) {
         textDivs[0].classList.remove("blurred")
         textDivs[1].classList.add("blurred")
@@ -41,7 +44,6 @@ window.addEventListener('scroll', () => {
         textDivs[1].classList.add("blurred")
         textDivs[2].classList.remove("blurred")
     }
-
     if(scrollProg > 70) {
         lineBreaks.forEach(hr => {
             hr.classList.add("extended")
@@ -76,3 +78,38 @@ phoneIcon.addEventListener('mouseleave', () => {
     classToggler(socialMedia, mailIcon, phoneNumber, "very-blurred", "hidden")
 })
 
+const menu = document.getElementById("menu");
+
+Array.from(document.getElementsByClassName("menu-item"))
+    .forEach((item, index) => {
+        item.onmouseover = () => {
+            menu.dataset.activeIndex = index;
+        }
+        item.onmouseout = () => {
+            menu.dataset.activeIndex = 5;
+        }
+    })
+
+const menuItems = document.querySelectorAll(".menu-item")
+const gifs = document.querySelectorAll(".gif")
+
+const mouseEnterFunc = (target, anim) => {
+    target.addEventListener("mouseover", () => {
+        anim.classList.remove("menu-inactive")
+    })
+}
+
+const mouseOutFunc = (target, anim) => {
+    target.addEventListener("mouseout", () => {
+        anim.classList.add("menu-inactive")
+    })
+}
+
+mouseEnterFunc(menuItems[0], gifs[0])
+mouseEnterFunc(menuItems[1], gifs[1])
+mouseEnterFunc(menuItems[2], gifs[2])
+mouseEnterFunc(menuItems[3], gifs[3])
+mouseOutFunc(menuItems[0], gifs[0])
+mouseOutFunc(menuItems[1], gifs[1])
+mouseOutFunc(menuItems[2], gifs[2])
+mouseOutFunc(menuItems[3], gifs[3])

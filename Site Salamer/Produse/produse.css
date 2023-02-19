@@ -1,0 +1,250 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow: hidden;
+    margin: 0;
+    background: linear-gradient(90.05deg, #FFF1F1 -1.74%, #C4D6CE 86.41%);
+}
+
+.pagina-produse {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+.burger-menu {
+    position: absolute;
+    z-index: 5;
+    width: 50px;
+    height: 50px;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.burger-menu span {
+    background: #0c442c;
+    width: 28px;
+    height: 4px;
+    border-radius: 6px;
+    position: absolute;
+    right: 13px;
+}
+
+.burger-menu span:nth-child(1) {
+    top: 12px;
+}.burger-menu span:nth-child(2) {
+     top: 22px;
+ }.burger-menu span:nth-child(3) {
+      top: 32px;
+  }
+
+.burger-menu.active span:nth-child(1) {
+    animation: top-burger-active .6s ease-in-out forwards;
+}
+.burger-menu.active span:nth-child(3) {
+    animation: bottom-burger-active .6s ease-in-out forwards;
+}
+.burger-menu.inactive span:nth-child(1) {
+    animation: top-burger-inactive .6s ease-in-out forwards;
+}
+.burger-menu.inactive span:nth-child(3) {
+    animation: bottom-burger-inactive .6s ease-in-out forwards;
+}
+
+@keyframes top-burger-active {
+    0% {
+        right: 13px;
+    }
+    30% {
+        width: 20px;
+        right: 17px;
+    }
+    90% {
+        top: 12px;
+    }
+    100% {
+        top: 16px;
+        width: 20px;
+        right: 17px;
+    }
+}
+
+@keyframes top-burger-inactive {
+    0% {
+        top: 16px;
+        width: 20px;
+        right: 17px;
+    }
+    30% {
+        top: 12px;
+    }
+    90% {
+        width: 20px;
+        right: 17px;
+    }
+    100% {
+        right: 13px;
+    }
+}
+
+@keyframes bottom-burger-active {
+    0% {
+        right: 13px;
+    }
+    30% {
+        right: 17px;
+        width: 20px;
+    }
+    90% {
+        top: 32px;
+    }
+    100% {
+        top: 28px;
+        width: 20px;
+        right: 17px;
+    }
+}
+
+@keyframes bottom-burger-inactive {
+    0% {
+        top: 28px;
+        width: 20px;
+        right: 17px;
+    }
+    30% {
+        top: 32px;
+    }
+    90% {
+        right: 17px;
+        width: 20px;
+    }
+    100% {
+        right: 13px;
+    }
+}
+
+.header-produse {
+    display: flex;
+}
+
+.text-header {
+    font-family: 'Lora', sans-serif;
+    color: #0c442c;
+    font-size: 8rem;
+    cursor: default;
+    font-weight: 600;
+    transition: .4s ease-in-out;
+    position: absolute;
+    left: 60px;
+    top: -100px;
+    user-select: none;
+}
+
+.header-hovered {
+    font-size: 5rem;
+    top: -3%;
+    opacity: .7;
+}
+
+.line-break {
+    height: 3px;
+    width: 55%;
+    background: #0c442c;
+    position: absolute;
+    right: 0;
+    top: 12%;
+    transition: .4s ease-in-out;
+}
+
+.hovered {
+    width: 24%;
+    opacity: .7;
+}
+
+.slideshow-products > .image {
+    width: 40vmin;
+    height: 56vmin;
+    object-fit: cover;
+    object-position: 100% 50%;
+    transition: .5s ease-in-out;
+}
+
+.slideshow-products > .image:hover {
+    transform: scale(1.08);
+}
+
+.slideshow-products:has(.image:hover) .image:not(.image:hover) {
+    opacity: 0.6;
+}
+
+.slideshow-products {
+    display: flex;
+    gap: 4vmin;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(0%, -40%);
+    user-select: none;
+}
+
+.product-info {
+    position: absolute;
+    width: 34%;
+    height: 20%;
+    top: 3%;
+    left: 34%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#category {
+    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+    color: #0c442c;
+    font-weight: 900;
+    margin-bottom: 0;
+    user-select: none;
+}
+
+#info,
+.gif-guide {
+    font-size: .9rem;
+    font-family: 'Poppins', sans-serif;
+    color: #0c442c;
+    text-align: center;
+    margin-top: 0;
+    user-select: none;
+}
+
+.gif-guide {
+    font-size: 1.2rem;
+}
+
+.gif-drag {
+    opacity: 1;
+    position: absolute;
+    top: 44%;
+    left: 10%;
+    width: 20%;
+    height: 15%;
+    transition: opacity .4s;
+}
+
+.mouse-gif {
+    opacity: 1;
+    position: absolute;
+    top: 40%;
+    left: 13%;
+    width: 15%;
+    height: 30%;
+    transition: opacity .4s;
+}
+
+.drag-started {
+    opacity: 0;
+}

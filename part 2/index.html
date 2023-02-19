@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Serif:opsz,wght@8..144,500&display=swap"
+            rel="stylesheet">
+    <title>Salamer</title>
+</head>
+
+<body>
+<section class="about">
+    <div class="line"></div>
+    <div class="container">
+        <div class="d-flex">
+            <div class="about-left">
+                <h1 class="title">DESPRE COMPANIE</h1>
+                <p class="text">
+                    De la o mică afacere de familie a ajuns la o companie de prestigiu cu mai mult de 500 de
+                    angajați și
+                    peste 60 de magazine specializate pe întreg teritoriul țării, primul fiind deschis în anul 2006
+                    în
+                    satul Mereni.
+                </p>
+                <div class="link_container">
+                    <a href="./pages/location.html" class="link">AFLA MAI MULT</a>
+                </div>
+            </div>
+            <div class="about-right">
+                <div class="outer">
+                    <video controls height="100%" width="100%" loop autoplay muted>
+                        <source src="./images/Salamer%20meat%20processing%20factory.mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="line-right"></div>
+</section>
+
+<section class="production-steps">
+    <div class="container">
+        <div>
+            <h1 class="title ps_title">ETAPELE DE PRODUCERE</h1>
+        </div>
+        <div class="d-flex">
+            <div class="columns">
+                <div class="column">
+                    <img class="gif" src="./images/wheat-animation.gif" alt="wheat">
+                    <h4>Grâu crescut <br> local</h4>
+                </div>
+                <div class="column">
+                    <img class="gif" src="./images/factory-animation.gif" alt="factory">
+                    <h4>Fabricat cu grijă</h4>
+                </div>
+                <div class="column">
+                    <img class="gif" src="./images/truck-animation.gif" alt="truck">
+                    <h4>Transportat la timp</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ps_line-right"></div>
+</section>
+
+<section class="products">
+    <div class="container">
+        <h1 class="title">Produsele noastre</h1>
+        <div class="d-flex">
+            <div class="card">
+                <img src="./images/milano.png" alt="milano">
+                <div class="intro">
+                    <h6>Salam Milano</h6>
+                    <p>Un salam delicat facut din aripi de dragon si multe alte produse. Bun de consumat la bere sau
+                        vin.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./images/milano.png" alt="milano">
+                <div class="intro">
+                    <h6>Salam Milano</h6>
+                    <p>Un salam delicat facut din aripi de dragon si multe alte produse. Bun de consumat la bere sau
+                        vin.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./images/milano.png" alt="milano">
+                <div class="intro">
+                    <h6>Salam Milano</h6>
+                    <p>Un salam delicat facut din aripi de dragon si multe alte produse. Bun de consumat la bere sau
+                        vin.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="line"></div>
+</section>
+<script>
+    const gifs = document.querySelectorAll('.gif');
+    window.addEventListener('scroll', () => {
+        let scrollProg = Math.floor(((window.scrollY) / (document.body.scrollHeight - window.innerHeight) * 100));
+        console.log(scrollProg);
+
+        for (let i = 0; i < gifs.length; i++) {
+            if (scrollProg >= 40 && scrollProg <= 70) {
+                gifs[i].style.opacity = 1
+            }
+        }
+    })
+</script>
+</body>
+</html>
+
+
+
+
+

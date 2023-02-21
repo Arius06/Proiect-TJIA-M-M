@@ -59,8 +59,6 @@ images.forEach(item => {
     })
 })
 
-console.log(images);
-
 images.forEach(item => {
     item.addEventListener('mouseout', () => {
         categoryTitle.textContent = ""

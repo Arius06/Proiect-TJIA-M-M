@@ -10,6 +10,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUqh4ukNpbpeP_hZadM0G27TXklXgHxaw&callback=initMap"
+            defer></script>
+    <script type="text/javascript" charset="UTF-8"
+            src="https://maps.googleapis.com/maps-api-v3/api/js/52/1/marker.js" defer></script>
+
 </head>
 <body>
 <section class="header-location">
@@ -20,12 +26,7 @@
 </section>
 <section class="locations">
     <div class="container">
-        <div class="map-container">
-            <iframe class="map"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2719.6425741703174!2d28.8387911!3d47.02762049999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c97c35fde4a6a9%3A0xb9b59e6ee9b06947!2zU3RyYWRhIFB1yJlraW4gMzcsIENoaciZaW7Eg3U!5e0!3m2!1sru!2s!4v1675601230346!5m2!1sru!2s"
-                    width="100%" height="455" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+        <div id="map"></div>
         <div class="title ps_title title_ps_title">
             <h1 class="title">Chișinău</h1>
         </div>
@@ -181,12 +182,12 @@
                     </div>
                     <div class="location-street">
                         <a target="_blank"
-                                href="https://www.google.com/maps/place/Bulevardul+Mircea+cel+B%C4%83tr%C3%AEn+7,+Chi%C8%99in%C4%83u,+%D0%9C%D0%BE%D0%BB%D0%B4%D0%B0%D0%B2%D0%B8%D1%8F/@47.0421084,28.8848108,17z/data=!3m1!4b1!4m5!3m4!1s0x40c97c8c23855555:0x407c92ab494b0f85!8m2!3d47.0421048!4d28.8892955"><img
+                           href="https://www.google.com/maps/place/Bulevardul+Mircea+cel+B%C4%83tr%C3%AEn+7,+Chi%C8%99in%C4%83u,+%D0%9C%D0%BE%D0%BB%D0%B4%D0%B0%D0%B2%D0%B8%D1%8F/@47.0421084,28.8848108,17z/data=!3m1!4b1!4m5!3m4!1s0x40c97c8c23855555:0x407c92ab494b0f85!8m2!3d47.0421048!4d28.8892955"><img
                                 src="../images/waypoint-icon.png" alt="waypoint"></a>
                         <div>
                             <p class="ps_title location-title">Ciocana</p>
                             <a target="_blank"
-                                    href="https://www.google.com/maps/place/Bulevardul+Mircea+cel+B%C4%83tr%C3%AEn+7,+Chi%C8%99in%C4%83u,+%D0%9C%D0%BE%D0%BB%D0%B4%D0%B0%D0%B2%D0%B8%D1%8F/@47.0421084,28.8848108,17z/data=!3m1!4b1!4m5!3m4!1s0x40c97c8c23855555:0x407c92ab494b0f85!8m2!3d47.0421048!4d28.8892955">
+                               href="https://www.google.com/maps/place/Bulevardul+Mircea+cel+B%C4%83tr%C3%AEn+7,+Chi%C8%99in%C4%83u,+%D0%9C%D0%BE%D0%BB%D0%B4%D0%B0%D0%B2%D0%B8%D1%8F/@47.0421084,28.8848108,17z/data=!3m1!4b1!4m5!3m4!1s0x40c97c8c23855555:0x407c92ab494b0f85!8m2!3d47.0421048!4d28.8892955">
                                 <p class="ps_title">bd. Mircea cel Bătrîn, 7</p></a>
                             <p class="ps_title">069 949 600</p>
                         </div>
@@ -220,4 +221,6 @@
         </div>
     </ul>
 </section>
+<script src="../main.js"></script>
+</body>
 </html>

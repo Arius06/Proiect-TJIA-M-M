@@ -324,4 +324,63 @@ input[type="radio"] {
     opacity: 0;
 }
 
+#map {
+    height: 45rem;
+    width: 100%;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .accordion .container label {
+        font-size: 65px;
+    }
+
+    .header-location .container .title {
+        font-size: 95px;
+    }
+
+    .location-street {
+        margin-right: 10px;
+    }
+
+    .about-left,
+    .about-right {
+        width: 100%;
+        margin: auto;
+    }
+
+    .title {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .text {
+        font-size: 20px;
+    }
+
+    .production-steps .title {
+        margin-bottom: 10px;
+    }
+
+    .column {
+        margin: auto;
+        padding: 0;
+    }
+
+    .link {
+        font-size: 20px;
+    }
+
+    .card {
+        margin: 0 0 2rem 0;
+    }
+
+    .intro h6 {
+        margin-top: 0px;
+        margin-left: -9px;
+    }
+}
 

@@ -333,6 +333,18 @@ input[type="radio"] {
     flex-wrap: wrap;
 }
 
+.label_locations:before {
+    content: "+";
+    margin-right: 2rem;
+    font-size: 5rem;
+    color: var(--ft-clr-main);
+}
+
+.accordion input[type="radio"]:checked + .label_locations::before {
+    content: "-";
+    transition: 0.1s ease-in;
+}
+
 @media (max-width: 768px) {
     .accordion .container label {
         font-size: 65px;

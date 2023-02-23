@@ -18,6 +18,7 @@
       <list>
         <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -35,6 +36,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "last_opened_file_path": "D:/PERSONAL/MARIUS/LYCEUM/11/Salamer/Proiect-TJIA-M-M/part 2",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "settings.editor.selected.configurable": "preferences.pluginManager"
@@ -42,6 +44,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\PERSONAL\MARIUS\LYCEUM\11\Salamer\Proiect-TJIA-M-M\part 2\css" />
       <recent name="D:\PERSONAL\MARIUS\LYCEUM\11\Team project  - WEB development &amp; design\pages" />
     </key>
   </component>

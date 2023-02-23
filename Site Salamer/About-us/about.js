@@ -1,11 +1,13 @@
 const burgerMenu = document.querySelector(".burger-menu")
 const navMenu = document.querySelector(".navigation-menu")
 const navBar = document.querySelector(".navbar")
+const body = document.querySelector("body")
 
 burgerMenu.addEventListener('click', () => {
     burgerMenu.classList.toggle("active")
     burgerMenu.classList.toggle("inactive")
     navMenu.classList.toggle("closed-nav")
+    body.classList.toggle("active")
 })
 
 let statCounters = document.querySelectorAll(".counter")
@@ -24,25 +26,41 @@ statCounters.forEach((statBubble) => {
 
 const textDivs = document.querySelectorAll(".text-div");
 const lineBreaks = document.querySelectorAll(".small-hr")
+const backgroundIcons = document.querySelectorAll(".background-icon")
+const navbarLogo = document.querySelector(".navbar-logo")
 
 window.addEventListener('scroll', () => {
     let scrollProg = Math.floor(((window.scrollY) / (document.body.scrollHeight - window.innerHeight) * 100))
-    console.log(scrollProg);
-    scrollProg > 3 ? navBar.classList.add("scrolled") : navBar.classList.remove("scrolled")
+    if (scrollProg > 3) {
+        navBar.classList.add("scrolled")
+        navbarLogo.style.display = "block"
+    } else {
+        navBar.classList.remove("scrolled")
+        navbarLogo.style.display = "none"
+    }
     if (scrollProg < 30) {
         textDivs[0].classList.remove("blurred")
         textDivs[1].classList.add("blurred")
         textDivs[2].classList.add("blurred")
+        backgroundIcons[0].classList.remove("dis-none")
+        backgroundIcons[1].classList.add("dis-none")
+        backgroundIcons[2].classList.add("dis-none")
     }
     if (scrollProg > 30 && scrollProg < 44) {
         textDivs[0].classList.add("blurred")
         textDivs[1].classList.remove("blurred")
         textDivs[2].classList.add("blurred")
+        backgroundIcons[0].classList.add("dis-none")
+        backgroundIcons[1].classList.remove("dis-none")
+        backgroundIcons[2].classList.add("dis-none")
     }
     if (scrollProg > 44) {
         textDivs[0].classList.add("blurred")
         textDivs[1].classList.add("blurred")
         textDivs[2].classList.remove("blurred")
+        backgroundIcons[0].classList.add("dis-none")
+        backgroundIcons[1].classList.add("dis-none")
+        backgroundIcons[2].classList.remove("dis-none")
     }
     if(scrollProg > 70) {
         lineBreaks.forEach(hr => {

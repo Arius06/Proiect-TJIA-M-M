@@ -389,6 +389,7 @@ body {
 .footer-logo {
     height: 5vh;
     user-select: none;
+    pointer-events: none;
 }
 
 .footer-desc {
@@ -546,6 +547,7 @@ body {
     color: rgba(255, 241, 241, 0.49);
     font-family: "Poppins", sans-serif;
     padding: 2vw;
+    user-select: none;
 }
 
 .anchors {

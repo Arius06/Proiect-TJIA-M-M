@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Salamer - Locatii</title>
+    <link rel="stylesheet" href="./general.css">
+    <link rel="stylesheet" href="./locations.css">
+    <link rel="stylesheet" href="./responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz@8..144&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUqh4ukNpbpeP_hZadM0G27TXklXgHxaw&callback=initMap"
+            defer></script>
+    <script type="text/javascript" charset="UTF-8"
+            src="https://maps.googleapis.com/maps-api-v3/api/js/52/1/marker.js" defer></script>
+
+</head>
+<body>
+    <div class="navigation-menu closed-nav">
+        <div id="menu">
+            <div id="menu-items">
+                <a href="../Landing/opening.html" class="menu-item" data-index="0">Acasa</a>
+                <a href="../Produse/produse.html" class="menu-item" data-index="1">Produse</a>
+                <a href="../Locations/locations.html" class="menu-item" data-index="2">Locatii</a>
+                <a href="../About-us/about.html" class="menu-item" data-index="3">Despre noi</a>
+            </div>
+            <div id="menu-pattern"></div>
+            <img src="../Resurse/icons/home-animation.gif" alt="home gif" class="gif menu-inactive">
+            <img src="../Resurse/icons/products-animation.gif" alt="products gif" class="gif menu-inactive">
+            <img src="../Resurse/icons/locations-animation.gif" alt="locations gif" class="gif menu-inactive">
+            <img src="../Resurse/icons/aboutus-animation.gif" alt="aboutus gif" class="gif menu-inactive">
+        </div>
+    </div>
+
+<section class="header-location">
+    <div class="container">
+        <div class="burger-menu inactive">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <h1 class="title">Locații</h1>
+        <div class="line-right"></div>
+    </div>
+</section>
+<section class="locations">
+    <div class="container">
+        <div id="map"></div>
+        <div class="title ps_title title_ps_title">
+            <h1 class="title">Chișinău</h1>
+        </div>
+    </div>
+    <ul class="accordion">
+        <div class="border">
+            <li class="container">
+                <input type="radio" name="accordion" id="first" checked>
+                <label class="label_locations" for="first">Centru</label>
+                <div class="content">
+                    <div class="location-street">
+                        <a target="_blank"
+                           href="https://www.google.com/maps/place/Strada+Pu%C8%99kin+37,+Chi%C8%99in%C4%83u,+%D0%9C%D0%BE%D0%BB%D0%B4%D0%B0%D0%B2%D0%B8%D1%8F/@47.0276241,28.8366024,17z/data=!3m1!4b1!4m5!3m4!1s0x40c97c35fde4a6a9:0xb9b59e6ee9b06947!8m2!3d47.0276205!4d28.8387911"><img
+                                src="../Resurse/static-icons/waypoint-icon.png" alt="waypoint"></a>
+                        <div>
+                            <a target="_blank"
+                               href="https://www.google.com/maps/place/Strada+Pu%C8%99kin+37,+Chi%C8%99in%C4%83u,+%D0%9C%D0%BE%D0%BB%D0%B4%D0%B0%D0%B2%D0%B8%D1%8F/@47.0276241,28.8366024,17z/data=!3m1!4b1!4m5!3m4!1s0x40c97c35fde4a6a9:0xb9b59e6ee9b06947!8m2!3d47.0276205!4d28.8387911">
+                                <p class="ps_title">str. Alexandru Pușkin 37</p></a>
+                            <p class="ps_title">060 122 260</p>
+                        </div>
+                    </div>
+                    <div class="location-street">
+                        <a href="https://www.google.com/maps/place/Strada+Nicolae+Testemi%C8%9Banu+17,+Chi%C8%99in%C4%83u,+%D0%9C%D0%BE%D0%BB%D0%B4%D0%B0%D0%B2%D0%B8%D1%8F/@46.9973736,28.8330723,17z/data=!3m1!4b1!4m5!3m4!1s0x40c97ea2d26a3179:0x647c04e4d959e703!8m2!3d46.99737!4d28.835261"><img
+                                src="../Resurse/static-icons/waypoint-icon.png" alt="waypoint"></a>
+                        <div>
+                            <a target="_blank"
+                               href="https://www.google.com/maps/place/Strada+Nicolae+Testemi%C8%9Banu+17,+Chi%C8%99in%C4%83u,+%D0%9C%D0%BE%D0%BB%D0%B4%D0%B0%D0%B2%D0%B8%D1%8F/@46.9973736,28.8330723,17z/data=!3m1!4b1!4m5!3m4!1s0x40c97ea2d26a3179:0x647c04e4d959e703!8m2!3d46.99737!4d28.835261">
+                                <p class="ps_title">str.Testimițanu 17/6</p></a>
+                            <p class="ps_title">079 988 802</p>
+                        </div>
+                    </div>
+                    <div class="location-street">
+                        <a target="_blank"
+                           href="https://www.google.com/maps/place/Strada+Bulgar%C4%83+47,+Chi%C8%99in%C4%83u,+%D0%9C%D0%BE%D0%BB%D0%B4%D0%B0%D0%B2%D0%B8%D1%8F/@47.0177018,28.8382191,17z/data=!3m1!4b1!4m5!3m4!1s0x40c97c252d598905:0x487d2fd45566db73!8m2!3d47.0176982!4d28.8404078"><img
+                                src="../Resurse/static-icons/waypoint-icon.png" alt="waypoint"></a>
+                        <div>
+                            <a target="_blank"
+                               href="https://www.google.com/maps/place/Strada+Bulgar%C4%83+47,+Chi%C8%99in%C4%83u,+%D0%9C%D0%BE%D0%BB%D0%B4%D0%B0%D0%B2%D0%B8%D1%8F/@47.0177018,28.8382191,17z/data=!3m1!4b1!4m5!3m4!1s0x40c97c252d598905:0x487d2fd45566db73!8m2!3d47.0176982!4d28.8404078">
+                                <p class="ps_title">str. Bulgara, 47</p></a>
+                            <p class="ps_title">068 943 131</p>
+                        </div>
+                    </div>
+                    <div class="location-street">
+                        <a target="_blank"
+                           href="https://www.google.com/maps/place/Strada+Ismail+49,+Chi%C8%99in%C4%83u+2001,+%D0%9C%D0%BE%D0%BB%D0%B4%D0%B0%D0%B2%D0%B8%D1%8F/@47.0185129,28.8445256,17z/data=!3m1!4b1!4m5!3m4!1s0x40c97c3c4083cd5f:0x94f369b6784f999f!8m2!3d47.0185093!4d28.8490103"><img
+                                src="../Resurse/static-icons/waypoint-icon.png" alt="waypoint"></a>
+                        <div>
+                            <a target="_blank"
+                               href="https://www.google.com/maps/place/Strada+Ismail+49,+Chi%C8%99in%C4%83u+2001,+%D0%9C%D0%BE%D0%BB%D0%B4%D0%B0%D0%B2%D0%B8%D1%8F/@47.0185129,28.8445256,17z/data=!3m1!4b1!4m5!3m4!1s0x40c97c3c4083cd5f:0x94f369b6784f999f!8m2!3d47.0185093!4d28.8490103">
+                                <p class="ps_title">str. Ismail 49</p></a>
+                            <p class="ps_title">068 919 594</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </div>
+        <div class="border">
+            <li class="container">
+                <input type="radio" name="accordion" id="second">
+                <label class="label_locations" for="second">Botanica</label>
+                <div class="content">
+                    <div class="location-street">
+                        <a target="_blank"
+                           href="https://www.google.com/maps/place/Strada+Independen%C8%9Bei+28,+Chi%C8%99in%C4%83u,+%D0%9C%D0%BE%D0%BB%D0%B4%D0%B0%D0%B2%D0%B8%D1%8F/@46.9769532,28.8558133,17z/data=!3m1!4b1!4m5!3m4!1s0x40c979371b42cd09:0x455ae38547551df9!8m2!3d46.9769496!4d28.858002"><img
+                                src="../Resurse/static-icons/waypoint-icon.png" alt="waypoint"></a>
+                        <div>
+                            <a target="_blank"
+                               href="https://www.google.com/maps/place/Strada+Independen%C8%9Bei+28,+Chi%C8%99in%C4%83u,+%D0%9C%D0%BE%D0%BB%D0%B4%D0%B0%D0%B2%D0%B8%D1%8F/@46.9769532,28.8558133,17z/data=!3m1!4b1!4m5!3m4!1s0x40c979371b42cd09:0x455ae38547551df9!8m2!3d46.9769496!4d28.858002">
+                                <p class="ps_title">str. Independenței, 28</p></a>
+                            <p class="ps_title">069 951 651</p>
+                        </div>
+                    </div>
+                    <div class="location-street">
+                        <a target="_blank"
+                           href="https://www.google.com/maps/place/Bulevardul+Dacia+16%2F2,+Chi%C8%99in%C4%83u+2038,+%D0%9C%D0%BE%D0%BB%D0%B4%D0%B0%D0%B2%D0%B8%D1%8F/@46.9885918,28.8501088,17z/data=!3m1!4b1!4m5!3m4!1s0x40c97eb3a18d9bad:0x70ff4b27deae943e!8m2!3d46.9885882!4d28.8522975"><img
+                                src="../Resurse/static-icons/waypoint-icon.png" alt="waypoint"></a>
+                        <div>
+                            <a target="_blank"
+                               href="https://www.google.com/maps/place/Bulevardul+Dacia+16%2F2,+Chi%C8%99in%C4%83u+2038,+%D0%9C%D0%BE%D0%BB%D0%B4%D0%B0%D0%B2%D0%B8%D1%8F/@46.9885918,28.8501088,17z/data=!3m1!4b1!4m5!3m4!1s0x40c97eb3a18d9bad:0x70ff4b27deae943e!8m2!3d46.9885882!4d28.8522975">
+                                <p class="ps_title">bd. Dacia, 16/2</p></a>
+                            <p class="ps_title">068 156 060</p>
+                        </div>
+                    </div>
+                    <div class="location-street">
+                        <a target="_blank"
+                           href="https://www.google.com/maps/place/Strada+Independen%C8%9Bei+24%2F4,+Chi%C8%99in%C4%83u+2060,+%D0%9C%D0%BE%D0%BB%D0%B4%D0%B0%D0%B2%D0%B8%D1%8F/@46.9784343,28.8526052,17z/data=!3m1!4b1!4m5!3m4!1s0x40c979368039e047:0xd8d72b99902f320!8m2!3d46.9784307!4d28.8547939"><img
+                                src="../Resurse/static-icons/waypoint-icon.png" alt="waypoint"></a>
+                        <div>
+                            <a target="_blank"
+                               href="https://www.google.com/maps/place/Strada+Independen%C8%9Bei+24%2F4,+Chi%C8%99in%C4%83u+2060,+%D0%9C%D0%BE%D0%BB%D0%B4%D0%B0%D0%B2%D0%B8%D1%8F/@46.9784343,28.8526052,17z/data=!3m1!4b1!4m5!3m4!1s0x40c979368039e047:0xd8d72b99902f320!8m2!3d46.9784307!4d28.8547939">
+                                <p class="ps_title">str. Independenței, 24/4</p></a>
+                            <p class="ps_title">068 292 120</p>
+                        </div>
+                    </div>
+                    <div class="location-street">
+                        <a href="https://www.google.com/maps/place/Bulevardul+Dacia+49%2F14,+Chi%C8%99in%C4%83u,+%D0%9C%D0%BE%D0%BB%D0%B4%D0%B0%D0%B2%D0%B8%D1%8F/@46.9784307,28.8647146,17z/data=!3m1!4b1!4m5!3m4!1s0x40c979476cfc856f:0x54eb70a73a8b75eb!8m2!3d46.9784271!4d28.8691993"><img
+                                src="../Resurse/static-icons/waypoint-icon.png" alt="waypoint"></a>
+                        <div>
+                            <a href="https://www.google.com/maps/place/Bulevardul+Dacia+49%2F14,+Chi%C8%99in%C4%83u,+%D0%9C%D0%BE%D0%BB%D0%B4%D0%B0%D0%B2%D0%B8%D1%8F/@46.9784307,28.8647146,17z/data=!3m1!4b1!4m5!3m4!1s0x40c979476cfc856f:0x54eb70a73a8b75eb!8m2!3d46.9784271!4d28.8691993">
+                                <p class="ps_title">bd. Dacia, 49</p></a>
+                            <p class="ps_title">068 918 884</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </div>
+        <div class="border">
+            <li class="container">
+                <input type="radio" name="accordion" id="third">
+                <label class="label_locations" for="third">Rîșcani</label>
+                <div class="content content-content">
+                    <div class="location-street">
+                        <a target="_blank"
+                           href="https://www.google.com/maps/place/Bulevardul+Moscova+9,+Chi%C8%99in%C4%83u+2068,+%D0%9C%D0%BE%D0%BB%D0%B4%D0%B0%D0%B2%D0%B8%D1%8F/@47.0490955,28.8602051,17z/data=!3m1!4b1!4m5!3m4!1s0x40c97cfc0b1b31b1:0x2fd26612257f4ebc!8m2!3d47.0490919!4d28.8623938"><img
+                                src="../Resurse/static-icons/waypoint-icon.png" alt="waypoint"></a>
+                        <div>
+                            <a target="_blank"
+                               href="https://www.google.com/maps/place/Bulevardul+Moscova+9,+Chi%C8%99in%C4%83u+2068,+%D0%9C%D0%BE%D0%BB%D0%B4%D0%B0%D0%B2%D0%B8%D1%8F/@47.0490955,28.8602051,17z/data=!3m1!4b1!4m5!3m4!1s0x40c97cfc0b1b31b1:0x2fd26612257f4ebc!8m2!3d47.0490919!4d28.8623938">
+                                <p class="ps_title">bd. Moscova nr 9</p></a>
+                            <p class="ps_title">060 100 767</p>
+                        </div>
+                    </div>
+                    <div class="location-street">
+                        <a target="_blank"
+                           href="https://www.google.com/maps/place/Tydor+Vladimirescu+12%2F1,+Strada+Tudor+Vladimirescu+12%2F1,+Chi%C8%99in%C4%83u,+%D0%9C%D0%BE%D0%BB%D0%B4%D0%B0%D0%B2%D0%B8%D1%8F/@47.0352475,28.8602471,17z/data=!3m1!4b1!4m5!3m4!1s0x40c97c5ba32465e1:0x89e43f8ccd9ec3bf!8m2!3d47.0352439!4d28.8624358"><img
+                                src="../Resurse/static-icons/waypoint-icon.png" alt="waypoint"></a>
+                        <div>
+                            <a target="_blank"
+                               href="https://www.google.com/maps/place/Tydor+Vladimirescu+12%2F1,+Strada+Tudor+Vladimirescu+12%2F1,+Chi%C8%99in%C4%83u,+%D0%9C%D0%BE%D0%BB%D0%B4%D0%B0%D0%B2%D0%B8%D1%8F/@47.0352475,28.8602471,17z/data=!3m1!4b1!4m5!3m4!1s0x40c97c5ba32465e1:0x89e43f8ccd9ec3bf!8m2!3d47.0352439!4d28.8624358">
+                                <p class="ps_title">str. Tudor Vladimerscu 12/1</p></a>
+                            <p class="ps_title">079 883 024</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </div>
+        <div class="border">
+            <li class="container">
+                <input type="radio" name="accordion" id="fourth">
+                <label class="label_locations" for="fourth">Alte locatăți</label>
+                <div class="content">
+                    <div class="location-street">
+                        <a target="_blank"
+                           href="https://www.google.com/maps/place/Strada+Ceucari+2,+Chi%C8%99in%C4%83u,+%D0%9C%D0%BE%D0%BB%D0%B4%D0%B0%D0%B2%D0%B8%D1%8F/@47.0592245,28.845629,17z/data=!3m1!4b1!4m5!3m4!1s0x40c97d1a82c54dc7:0x678d5ee252049476!8m2!3d47.0592209!4d28.8478177"><img
+                                src="../Resurse/static-icons/waypoint-icon.png" alt="waypoint"></a>
+                        <div>
+                            <p class="ps_title location-title">Poșta Veche</p>
+                            <a target="_blank"
+                               href="https://www.google.com/maps/place/Strada+Ceucari+2,+Chi%C8%99in%C4%83u,+%D0%9C%D0%BE%D0%BB%D0%B4%D0%B0%D0%B2%D0%B8%D1%8F/@47.0592245,28.845629,17z/data=!3m1!4b1!4m5!3m4!1s0x40c97d1a82c54dc7:0x678d5ee252049476!8m2!3d47.0592209!4d28.8478177">
+                                <p class="ps_title">str. Ceucari, 2</p></a>
+                            <p class="ps_title">068 944 522</p>
+                        </div>
+                    </div>
+                    <div class="location-street">
+                        <a target="_blank"
+                           href="https://www.google.com/maps/place/Bulevardul+Mircea+cel+B%C4%83tr%C3%AEn+7,+Chi%C8%99in%C4%83u,+%D0%9C%D0%BE%D0%BB%D0%B4%D0%B0%D0%B2%D0%B8%D1%8F/@47.0421084,28.8848108,17z/data=!3m1!4b1!4m5!3m4!1s0x40c97c8c23855555:0x407c92ab494b0f85!8m2!3d47.0421048!4d28.8892955"><img
+                                src="../Resurse/static-icons/waypoint-icon.png" alt="waypoint"></a>
+                        <div>
+                            <p class="ps_title location-title">Ciocana</p>
+                            <a target="_blank"
+                               href="https://www.google.com/maps/place/Bulevardul+Mircea+cel+B%C4%83tr%C3%AEn+7,+Chi%C8%99in%C4%83u,+%D0%9C%D0%BE%D0%BB%D0%B4%D0%B0%D0%B2%D0%B8%D1%8F/@47.0421084,28.8848108,17z/data=!3m1!4b1!4m5!3m4!1s0x40c97c8c23855555:0x407c92ab494b0f85!8m2!3d47.0421048!4d28.8892955">
+                                <p class="ps_title">bd. Mircea cel Bătrîn, 7</p></a>
+                            <p class="ps_title">069 949 600</p>
+                        </div>
+                    </div>
+                    <div class="location-street">
+                        <a target="_blank"
+                           href="https://www.google.com/maps/place/Strada+Lipcani,+Chi%C8%99in%C4%83u,+%D0%9C%D0%BE%D0%BB%D0%B4%D0%B0%D0%B2%D0%B8%D1%8F/@47.0333093,28.7764687,17z/data=!3m1!4b1!4m5!3m4!1s0x40c97dfa736ff645:0xde3154323b648bff!8m2!3d47.0333057!4d28.7786574"><img
+                                src="../Resurse/static-icons/waypoint-icon.png" alt="waypoint"></a>
+                        <div>
+                            <p class="ps_title location-title">Buiucani</p>
+                            <a target="_blank"
+                               href="https://www.google.com/maps/place/Strada+Lipcani,+Chi%C8%99in%C4%83u,+%D0%9C%D0%BE%D0%BB%D0%B4%D0%B0%D0%B2%D0%B8%D1%8F/@47.0333093,28.7764687,17z/data=!3m1!4b1!4m5!3m4!1s0x40c97dfa736ff645:0xde3154323b648bff!8m2!3d47.0333057!4d28.7786574">
+                                <p class="ps_title">str-la Lipcani, bloc 9, of 1</p></a>
+                            <p class="ps_title">068 940 887</p>
+                        </div>
+                    </div>
+                    <div class="location-street">
+                        <a target="_blank"
+                           href="https://www.google.com/maps/place/%C8%98oseaua+H%C3%AEnce%C5%9Fti+60%2F4,+Chi%C8%99in%C4%83u,+%D0%9C%D0%BE%D0%BB%D0%B4%D0%B0%D0%B2%D0%B8%D1%8F/@47.0027038,28.8137076,17z/data=!3m1!4b1!4m5!3m4!1s0x40c97e857f60975b:0xf208dee41e214d0d!8m2!3d47.0027002!4d28.8158963"><img
+                                src="../Resurse/static-icons/waypoint-icon.png" alt="waypoint"></a>
+                        <div>
+                            <p class="ps_title location-title">Telecentru</p>
+                            <a target="_blank"
+                               href="https://www.google.com/maps/place/%C8%98oseaua+H%C3%AEnce%C5%9Fti+60%2F4,+Chi%C8%99in%C4%83u,+%D0%9C%D0%BE%D0%BB%D0%B4%D0%B0%D0%B2%D0%B8%D1%8F/@47.0027038,28.8137076,17z/data=!3m1!4b1!4m5!3m4!1s0x40c97e857f60975b:0xf208dee41e214d0d!8m2!3d47.0027002!4d28.8158963">
+                                <p class="ps_title">șos. Hîncești, 60/4</p></a>
+                            <p class="ps_title">079 883 021</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </div>
+    </ul>
+</section>
+<div class="footer">
+    <div class="footer-wrapper">
+        <div class="footer-smalldesc">
+            <img src="../Resurse/logo-white.png" alt="salamer white logo" class="footer-logo">
+            <div class="footer-textbox">
+                <p class="footer-desc"> Salamer, una dintre cele mai mari și inovative întreprinderi de procesare a cărnii și
+                    fabricare a mezelurilor din Republica Moldova. </p>
+            </div>
+        </div>
+        <div class="footer-navlist">
+            <div class="anchors">
+                <a href="../Landing/opening.html"><p class="footer-anchor">ACASA</p></a>
+                <a href="../Produse/produse.html"><p class="footer-anchor">PRODUSE</p></a>
+                <a href="../About-us/about.html"><p class="footer-anchor">DESPRE NOI<p></p></a>
+            </div>
+            <div class="footer-othlinks">
+                <a href=""><p class="footer-anchor termsconds">Termeni și condiții</p></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-break"></div>
+    <p class="footer-desc" id="copyright">Acest website a fost realizat în cadrul
+        competiției ”Tekwill Junior Ambassadors” organizată de proiectul ”Tekwill în Fiecare
+        Școală” și nu reflectă neapărat opinia proiectului.
+        </p>
+</div>
+<script src="./locations.js"></script>
+</body>
+</html>

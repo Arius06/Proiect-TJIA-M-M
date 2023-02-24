@@ -334,6 +334,15 @@ a {
     top: 0;
 }
 
+.background-icon {
+    position: absolute;
+    left: 28%;
+    top: -24%;
+    width: 82vw;
+    z-index: 0;
+    filter: blur(20px);
+}
+
 .d-flex {
     display: flex;
     justify-content: center;
@@ -870,7 +879,8 @@ a {
 #mainpage-logo,
 .siteinvite-circle,
 #main-background-video,
-.locations-gif {
+.locations-gif,
+.background-icon {
     display: none;
 }
 

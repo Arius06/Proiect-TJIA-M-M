@@ -44,6 +44,20 @@ mouseOutFunc(menuItems[1], gifs[1])
 mouseOutFunc(menuItems[2], gifs[2])
 mouseOutFunc(menuItems[3], gifs[3])
 
+const navBar = document.querySelector(".navbar")
+const navbarLogo = document.querySelector(".navbar-logo")
+
+window.addEventListener('scroll', () => {
+    let scrollProg = Math.floor(((window.scrollY) / (document.body.scrollHeight - window.innerHeight) * 100))
+    if (scrollProg > 3) {
+        navBar.classList.add("scrolled")
+        navbarLogo.style.display = "block"
+    } else {
+        navBar.classList.remove("scrolled")
+        navbarLogo.style.display = "none"
+    }
+})
+
 google.maps.event.addDomListener(window, 'load', initMap);
 
 function initMap() {

@@ -69,11 +69,13 @@ const navBar = document.querySelector(".navbar")
 const gifs = document.querySelectorAll('.gif');
 window.addEventListener('scroll', () => {
     let scrollProg = Math.floor(((window.scrollY) / (document.body.scrollHeight - window.innerHeight) * 100));
-    scrollProg > 5 ? navBar.classList.add("scrolled") :         navBar.classList.remove("scrolled")
+    scrollProg > 5 ? navBar.classList.add("scrolled") : navBar.classList.remove("scrolled");
 
     for (let i = 0; i < gifs.length - 1; i++) {
         if (scrollProg >= 40 && scrollProg <= 70) {
-            gifs[i].style.opacity = 1
+            setTimeout(()=> {
+                gifs[i].style.opacity = 1
+            }, i*1000)
         }
     }
     if (scrollProg > 80 ) gifs[3].style.opacity = 1

@@ -165,13 +165,13 @@ body.active {
     width: 100%;
     height: 0;
     background: rgba(196, 214, 206, 0.2);
-    backdrop-filter: blur(20px) saturate(160%) contrast(45%) brightness(140%);
-    -webkit-backdrop-filter: blur(20px) saturate(160%) contrast(45%) brightness(140%);
     border-bottom: 3px solid #0c442c;
     transition: .2s all ease-in-out;
 }
 
-.scrolled {
+.navbar.scrolled {
+    backdrop-filter: blur(20px) saturate(160%) contrast(45%) brightness(140%);
+    -webkit-backdrop-filter: blur(20px) saturate(160%) contrast(45%) brightness(140%);
     height: 10vh;
 }
 
@@ -656,7 +656,7 @@ body.active {
 @media (max-width: 1025px) {
 
 .burger-menu {
-    position: absolute;
+    position: fixed;
 }
 
 .menu-pattern,
@@ -778,7 +778,7 @@ body.active {
 
 .stat-bubble {
     display: flex;
-    width: 40%;
+    width: 60%;
     background-color: rgba(12, 68, 44, 0.1);
     align-items: center;
     justify-content: center;

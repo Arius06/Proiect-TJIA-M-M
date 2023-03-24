@@ -7,3 +7,6 @@ aceștia au implementat un landing page, dar deja investisem prea mult timp în 
 a re-organiza tot conceptul. Mulțumim pentru timpul dvs.
 
 - Echipa M&M
+
+Link spre repository-ul de pe GitHub in care am lucrat:
+https://github.com/Arius06/Proiect-TJIA-M-M
